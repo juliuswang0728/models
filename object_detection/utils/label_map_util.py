@@ -19,7 +19,15 @@ import logging
 
 import tensorflow as tf
 from google.protobuf import text_format
-from object_detection.protos import string_int_label_map_pb2
+import os, sys
+
+file_path = os.path.abspath(__file__)
+file_path = os.path.join(file_path, '../../')
+sys.path.append(os.path.abspath(file_path))
+
+import protos.string_int_label_map_pb2 as string_int_label_map_pb2
+#from object_detection.protos import string_int_label_map_pb2
+#from protos import string_int_label_map_pb2
 
 def create_category_index(categories):
   """Creates dictionary of COCO compatible categories keyed by category id.

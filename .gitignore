@@ -1,3 +1,6 @@
+# some model files will be placed here
+object_detection/data/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
